@@ -1,0 +1,122 @@
+.grid {
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    height: 640px;
+    width: 640px;
+    background-color:black;
+    /* background-color: white; */
+    /* background-image: url('images/GuardiansPlightBookCover.jpg'); */
+    /* The opacity should be bumped up to 100% when final volcano image is placed. */
+    opacity: 70%;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+    color: white;
+}
+
+.ending-block {
+    background-color: brown;
+}
+
+.score {
+    color: black;
+}
+
+.fireballUpLt {
+    background-image: url('images/fireballUpLt.png');
+    z-index: 4;
+}
+
+.fireballUpCt {
+    background-image: url('images/fireballUpCt.png');
+    z-index: 4;
+}
+
+.fireballUpRt {
+    background-image: url('images/fireballUpRt.png');
+    z-index: 4;
+}
+
+.fireballDnLt {
+    background-image: url('images/fireballDnLt.png');
+    z-index: 4;
+}
+
+.fireballFlareDnLt {
+    background-image: url('images/fireballFlareDnLt.png');
+    z-index: 4;
+}
+
+.fireballDnRt {
+    background-image: url('images/fireballDnRt.png');
+    z-index: 4;
+}
+
+.fireballFlareDnRt {
+    background-image: url('images/fireballsFlareDnRt.png');
+    z-index: 4;
+}
+
+.fireballDnCt {
+    background-image: url('images/fireballDnCt.png');
+    z-index: 4;
+}
+
+.fireballFlareDnCt {
+    background-image: url('images/fireballFlareDnCt.png');
+    z-index: 4;
+}
+
+.fireballDnExplosion {
+    background-image: url('images/Explosion.png');
+    z-index: 4;
+}
+
+.spellCaster {
+    width: 40px;
+    height: 40px;
+    background-color: purple;
+    z-index: 3;
+}
+
+.spellCatcher {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    z-index: 2;
+}
+
+.laser {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    z-index: 2;
+}
+
+
+.village001 {
+    width: 80px;
+    height: 40px;
+    background-image: url('images/farBeyondVillage001.png');
+}
+
+.village002 {
+    width: 80px;
+    height: 40px;
+    background-image: url('images/farBeyondVillage002.png');
+}
+
+.village003 {
+    width: 80px;
+    height: 40px;
+    background-image: url('images/farBeyondVillage003.png');
+}
+
+.village004 {
+    width: 80px;
+    height: 40px;
+    background-image: url('images/farBeyondVillage004.png');
+}
