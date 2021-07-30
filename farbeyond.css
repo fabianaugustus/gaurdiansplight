@@ -4,9 +4,9 @@
     flex-wrap: wrap;
     height: 640px;
     width: 640px;
-    background-color:black;
+    /* background-color:black; */
     /* background-color: white; */
-    /* background-image: url('images/GuardiansPlightBookCover.jpg'); */
+    background-image: url('images/GuardiansPlightBookCover.jpg'); */
     /* The opacity should be bumped up to 100% when final volcano image is placed. */
     opacity: 70%;
 }
@@ -56,7 +56,7 @@
 }
 
 .fireballFlareDnRt {
-    background-image: url('images/fireballsFlareDnRt.png');
+    background-image: url('images/fireballFlareDnRt.png');
     z-index: 4;
 }
 
