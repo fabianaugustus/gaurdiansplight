@@ -4,11 +4,11 @@
     flex-wrap: wrap;
     height: 640px;
     width: 640px;
-    /* background-color:black; */
+    /* background-color:green; */
     /* background-color: white; */
-    background-image: url('images/GuardiansPlightBookCover.jpg'); */
+    background-image: url('images/GuardiansPlightBG.png');
     /* The opacity should be bumped up to 100% when final volcano image is placed. */
-    opacity: 70%;
+    // opacity: 60%;
 }
 
 .grid div {
@@ -75,17 +75,33 @@
     z-index: 4;
 }
 
-.spellCaster {
+.spellCaster1 {
     width: 40px;
     height: 40px;
-    background-color: purple;
+    background-image: url('images/SpellCaster001.png');
+    /* background-color: purple; */
     z-index: 3;
 }
 
-.spellCatcher {
+.spellCaster2 {
     width: 40px;
     height: 40px;
-    background-color: blue;
+    background-image: url('images/SpellCaster002.png');
+    /* background-color: purple; */
+    z-index: 3;
+}
+
+.spellCatcher1 {
+    width: 40px;
+    height: 40px;
+    background-image: url('images/SpellCatcher002.png');
+    z-index: 2;
+}
+
+.spellCatcher2 {
+    width: 40px;
+    height: 40px;
+    background-image: url('images/SpellCatcher001.png');
     z-index: 2;
 }
 

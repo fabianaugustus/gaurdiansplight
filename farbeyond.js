@@ -33,28 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
             
                 switch(ignite > 0) {
                     case (ignite < 0.333):
-                        console.log('left-one')
+                        //console.log('left-one')
                         currentfireUpIndex -= width
                         squares[currentfireUpIndex].classList.add('fireballUpCt')
-                        console.log(currentfireUpIndex)
+                        //console.log(currentfireUpIndex)
                     setTimeout(() => {
                         squares[currentfireUpIndex].classList.remove('fireballUpCt')
                     }, 50)
                         break
                     case (ignite >= 0.333 && ignite < 0.666):
-                        console.log('center-one')
+                        //console.log('center-one')
                         currentfireUpIndex -= width
                         squares[currentfireUpIndex].classList.add('fireballUpCt')
-                        console.log(currentfireUpIndex)
+                        //console.log(currentfireUpIndex)
                     setTimeout(() => {
                         squares[currentfireUpIndex].classList.remove('fireballUpCt')
                     }, 50)
                         break
                     case (ignite >= 0.666):
-                        console.log('right-one')
+                        //console.log('right-one')
                         currentfireUpIndex -= width
                         squares[currentfireUpIndex].classList.add('fireballUpCt')
-                        console.log(currentfireUpIndex)
+                        //console.log(currentfireUpIndex)
                     setTimeout(() => {
                         squares[currentfireUpIndex].classList.remove('fireballUpCt')
                     }, 50)
@@ -64,28 +64,28 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
                 switch(ignite > 0) {
                     case (ignite < 0.333):
-                        console.log('left-two')
+                        //console.log('left-two')
                         currentfireUpIndex -= width + 1
                         squares[currentfireUpIndex].classList.add('fireballUpLt')
-                        console.log(currentfireUpIndex)
+                        //console.log(currentfireUpIndex)
                     setTimeout(() => {
                         squares[currentfireUpIndex].classList.remove('fireballUpLt')
                     }, 50)
                         break
                     case (ignite >= 0.333 && ignite < 0.666):
-                        console.log('center-two')
+                        //console.log('center-two')
                         currentfireUpIndex -= width
                         squares[currentfireUpIndex].classList.add('fireballUpCt')
-                        console.log(currentfireUpIndex)
+                        //console.log(currentfireUpIndex)
                     setTimeout(() => {
                         squares[currentfireUpIndex].classList.remove('fireballUpCt')
                     }, 50)
                         break
                     case (ignite >= 0.666):
-                        console.log('right-two')
+                        //console.log('right-two')
                         currentfireUpIndex -= width - 1
                         squares[currentfireUpIndex].classList.add('fireballUpRt')
-                        console.log(currentfireUpIndex)
+                        //console.log(currentfireUpIndex)
                     setTimeout(() => {
                         squares[currentfireUpIndex].classList.remove('fireballUpRt')
                     }, 50)
@@ -117,81 +117,66 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ignite < 0.083) {
             setTimeout(() => {   
                 currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
+                squares[currentFireDnIndex].classList.add('fireballDnRt')
             }, 602)    
             setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 652)
-            setTimeout(() => {   
-                currentFireDnIndex += width +1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
-            }, 653)
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
-            }, 703)
-            let localTimer = 703;
-            for (let i = 0; i < 9; i++) {
+                squares[currentFireDnIndex].classList.remove('fireballDnRt')
+            }, 702)
+            let localTimer = 702;
+            for (let i = 0; i < 10; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
                     squares[currentFireDnIndex].classList.add('fireballDnRt')
                 }, localTimer = localTimer +1)
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer = localTimer +50)
+                }, localTimer = localTimer +100)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1214)    
+            }, 1713)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
                 squares[237].classList.remove('village003')
-            }, 1264)
+            }, 1813)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1265)    
+            }, 1814)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1315)
+            }, 1914)
 
 // TIMELINE (Fireball Down Start - 0:00:01:0315)
     
     // fireball down LEFT bounces and moves down right diagonally
         } else if (ignite => 0.083) {
-            setTimeout(() => {   
-                currentFireDnIndex += width +1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
-            }, 653)
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
-            }, 703)
-
-            let localTimer = 703;
-            for (let i = 0; i < 10; i++) {
+            let localTimer = 601;
+            for (let i = 0; i < 11; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
                     squares[currentFireDnIndex].classList.add('fireballDnRt')
                 }, localTimer = localTimer +1)  
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer = localTimer +50)
+                }, localTimer = localTimer +100)
             }
             setTimeout(() => {
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1214)   
+            }, 1714)   
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
                 squares[238].classList.remove('village004')
-            }, 1264)
+            }, 1814)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1265)    
+            }, 1815)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1315)
+            }, 1915)
         }
     }
 // END of fireball down LEFT reenters at 2 and moves down diagonally to the left 
@@ -205,127 +190,97 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
             }, 550)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 551)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 601)
-            setTimeout(() => {   
-                ccurrentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 602)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 652)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 653)
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 703)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 704)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 754)
+
+            let localTimer1 = 550;
+            for (let x = 0; x < 4; x++) {
+                setTimeout(() => {   
+                    currentFireDnIndex += width -1
+                    squares[currentFireDnIndex].classList.add('fireballDnLt')
+                }, localTimer1 = localTimer1 +1)    
+                setTimeout(() => {
+                    squares[currentFireDnIndex].classList.remove('fireballDnLt')
+                }, localTimer1 = localTimer1 +50)
+            }
             
     // fireball down LEFT moves down ONE space then moves down right diagonally
         if (ignite < 0.25) {
-            setTimeout(() => {   
-                currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
-            }, 755)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
-            }, 805)
-            setTimeout(() => {   
-                currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 806)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnRt')
-            }, 856)
-            setTimeout(() => {   
-                currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
-            }, 857)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
-            }, 907)
 
-            let localTimer = 907;
+            let localTimer2 = 754;
+            for (let x = 0; x < 3; x++) {
+                setTimeout(() => {   
+                    currentFireDnIndex += width
+                    squares[currentFireDnIndex].classList.add('fireballDnRt')
+                }, localTimer2 = localTimer2 +1)    
+                setTimeout(() => {
+                    squares[currentFireDnIndex].classList.remove('fireballDnRt')
+                }, localTimer2 = localTimer2 +50)
+            }
+
+            let localTimer3 = 907;
             for (let i = 0; i < 6; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
                     squares[currentFireDnIndex].classList.add('fireballDnRt')
-                }, localTimer = localTimer +1)    
+                }, localTimer3 = localTimer3 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer = localTimer +50)
+                }, localTimer3 = localTimer3 +100)
             }  
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1214)    
+            }, 1514)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
                 squares[233].classList.remove('village004')
-            }, 1264)
+            }, 1614)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1265)    
+            }, 1615)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1315)
+            }, 1715)
     
     // fireball down LEFT bounces and moves down right diagonally
         } else if (ignite => 0.25) {
-            setTimeout(() => {   
-                currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
-            }, 755)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
-            }, 805)
-            setTimeout(() => {   
-                currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 806)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnRt')
-            }, 856)
+            
+            let localTimer2 = 754;
+            for (let i = 0; i < 2; i++) {
+                setTimeout(() => {   
+                    currentFireDnIndex += width +1
+                    squares[currentFireDnIndex].classList.add('fireballDnRt')
+                }, localTimer2 = localTimer2 +1)    
+                setTimeout(() => {
+                    squares[currentFireDnIndex].classList.remove('fireballDnRt')
+                }, localTimer2 = localTimer2 +50)
+            }
 
-            let localTimer = 856;
+            let localTimer3 = 856;
             for (let i = 0; i < 7; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
                     squares[currentFireDnIndex].classList.add('fireballDnRt')
-                }, localTimer = localTimer +1)    
+                }, localTimer3 = localTimer3 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer = localTimer +50)
+                }, localTimer3 = localTimer3 +50)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1214)    
+            }, 1564)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
                 squares[234].classList.remove('village003')
-            }, 1264)
+            }, 1664)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1265)    
+            }, 1665)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1315)
+            }, 1765)
         }
     }
 // END of fireball down LEFT reenters at 4 and moves down diagonally to the left
@@ -383,27 +338,17 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
             }, 550)
-            setTimeout(() => {   
-                currentFireDnIndex += width +1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
-            }, 551)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
-            }, 601)
-            setTimeout(() => {   
-                currentFireDnIndex += width +1
-                squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 602)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnRt')
-            }, 652)
-            setTimeout(() => {   
-                currentFireDnIndex += width +1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
-            }, 653)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
-            }, 703)
+
+            let localTimer1 = 550;
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {   
+                    currentFireDnIndex += width +1
+                    squares[currentFireDnIndex].classList.add('fireballDnRt')
+                }, localTimer1 = localTimer1 +1)    
+                setTimeout(() => {
+                    squares[currentFireDnIndex].classList.remove('fireballDnRt')
+                }, localTimer1 = localTimer1 +50)
+            }
                 
             //  "IF" statement to divide fireball Dn Right
             
@@ -417,21 +362,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 754)
             setTimeout(() => {   
                 currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
+                squares[currentFireDnIndex].classList.add('fireballDnLt')
             }, 755)    
             setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
+                squares[currentFireDnIndex].classList.remove('fireballDnLt')
             }, 805)
 
-            let localTimer = 805;
+            let localTimer2 = 805;
             for (let i = 0; i < 7; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width -1
                     squares[currentFireDnIndex].classList.add('fireballDnLt')
-                }, localTimer = localTimer +1)    
+                }, localTimer2 = localTimer2 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, localTimer = localTimer +50)
+                }, localTimer2 = localTimer2 +50)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
@@ -459,10 +404,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 754)
             setTimeout(() => {   
                 currentFireDnIndex += width
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
+                squares[currentFireDnIndex].classList.add('fireballDnLt')
             }, 755)    
             setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
+                squares[currentFireDnIndex].classList.remove('fireballDnLt')
             }, 805)
             setTimeout(() => {   
                 currentFireDnIndex += width
@@ -472,15 +417,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
             }, 856)
 
-            let localTimer = 856;
+            let localTimer3 = 856;
             for (let i = 0; i < 6; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width -1
                     squares[currentFireDnIndex].classList.add('fireballDnLt')
-                }, localTimer = localTimer +1)    
+                }, localTimer3 = localTimer3 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, localTimer = localTimer +50)
+                }, localTimer3 = localTimer3 +50)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
@@ -512,108 +457,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 550)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnRt')
+                squares[currentFireDnIndex].classList.add('fireballDnRt')
             }, 551)    
             setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnRt')
+                squares[currentFireDnIndex].classList.remove('fireballDnRt')
             }, 601)
 
 //  "IF" statement to divide fireball Dn Right
             
         if (ignite >= 0.833 && ignite < 0.916) {
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 602)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 652)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 653)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 703)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 704)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 754)
+            let localTimer2 = 601;
+            for (let i = 0; i < 11; i++) {
+                setTimeout(() => {   
+                    currentFireDnIndex += width -1
+                    squares[currentFireDnIndex].classList.add('fireballDnLt')
+                }, localTimer2 = localTimer2 +1)    
+                setTimeout(() => {
+                    squares[currentFireDnIndex].classList.remove('fireballDnLt')
+                }, localTimer2 = localTimer2 +100)
+            }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 755)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 805)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 806)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 856)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 857)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 907)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 908)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 958)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 959)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 1009)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 1010)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 1060)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 1061)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 1111)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 1112)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 1162)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 1163)    
+            }, 1714)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
                 squares[225].classList.remove('village001')
-
-            }, 1213)
+            }, 1814)
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1214)    
+            }, 1815)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1264)
+            }, 1915)
     
         } else if (ignite >= 0.916) {
             setTimeout(() => {   
@@ -623,91 +500,34 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
             }, 652)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 653)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 703)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 704)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 754)
-            setTimeout(() => {   
-            currentFireDnIndex += width -1
-            squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 755)   
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 805)
+
+            let localTimer = 652;
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {   
+                    currentFireDnIndex += width -1
+                    squares[currentFireDnIndex].classList.add('fireballDnLt')
+                }, localTimer = localTimer +1)    
+                setTimeout(() => {
+                    squares[currentFireDnIndex].classList.remove('fireballDnLt')
+                }, localTimer = localTimer +100)
+//  TODO - FIX TIMING
+
+            }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 806)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 856)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 857)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 907)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 908)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 958)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 959)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 1009)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 1010)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 1060)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 1061)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
-            }, 1111)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 1112)    
-            setTimeout(() => {
-                squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 1162)
-            setTimeout(() => {   
-                currentFireDnIndex += width -1
-                squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 1163)    
+            }, 1865) 
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
                 squares[226].classList.remove('village002')
-            }, 1213)
+            }, 1965)
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1214)    
+            }, 1966)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')                
-            }, 1264)
+            }, 2066)
         }
     }
 // END of fireball down RIGHT reenters at 13 and moves down diagonally to the right
@@ -717,8 +537,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // START OF SPELLCASTER/SPELLCATCHER FUNCTION    
 function moveSpellCaster(e) {
-        squares[currentSpellCasterIndex].classList.remove('spellCaster')
-        squares[currentSpellCatcherIndex].classList.remove('spellCatcher')
+        squares[currentSpellCasterIndex].classList.remove('spellCaster1')
+        squares[currentSpellCasterIndex].classList.remove('spellCaster2')
+        squares[currentSpellCatcherIndex].classList.remove('spellCatcher1')
+        squares[currentSpellCatcherIndex].classList.remove('spellCatcher2')
         switch(e.keyCode) {
             case 37:
                 if(currentSpellCasterIndex % width !== 0) currentSpellCasterIndex -=1
@@ -736,9 +558,21 @@ function moveSpellCaster(e) {
                 break
         }
 
-        squares[currentSpellCasterIndex].classList.add('spellCaster')
-        squares[currentSpellCatcherIndex].classList.add('spellCatcher')
+        if (currentSpellCasterIndex % 2 == 0 ) {
+            squares[currentSpellCasterIndex].classList.add('spellCaster2')
+        } else {
+            squares[currentSpellCasterIndex].classList.add('spellCaster1')
+        }
 
+        if (currentSpellCatcherIndex % 2 == 0 ) {
+            squares[currentSpellCatcherIndex].classList.add('spellCatcher1')
+        } else {
+            squares[currentSpellCatcherIndex].classList.add('spellCatcher2')
+        }
+
+        
+        /* squares[currentSpellCatcherIndex].classList.add('spellCatcher') */
+// Return spellCatcher and spellCaster Index for the laserFire() function
 }
 // END OF SPELLCASTER/SPELLCATCHER FUNCTION
 
@@ -750,7 +584,7 @@ function moveSpellCaster(e) {
 
 function laserFire() {
     if (villagesRemaining != 0) {
-                laserFireIndex = currentSpellCasterIndex
+                let laserFireIndex = currentSpellCasterIndex
                 setTimeout(() => {
                     laserFireIndex -= width
                     squares[laserFireIndex].classList.add('laser')
@@ -859,8 +693,8 @@ function laserFire() {
 laserFireRt() { */
 
     if (activateLaserRt >= 1 && villagesRemaining != 0) {
-                setTimeout(() => {
-                laserFireIndex = currentSpellCatcherIndex
+            let laserFireIndex = currentSpellCatcherIndex
+            setTimeout(() => {    
                 setTimeout(() => {
                     laserFireIndex -= width
                     squares[laserFireIndex].classList.add('laser')
@@ -967,7 +801,7 @@ laserFireRt() { */
 // END OF AUTOLASER FUNCTIONS
 
 /* function scoreTracker() {
-if (laserFireIndex = currentFireDnIndex) {
+if (laserFireIndex = 55) {
     //score = 0
     score++
     console.log(score)
@@ -1035,7 +869,7 @@ This can be based on time or a certain score.
         createVillages()
         movePieces()
         timerId = setInterval(movePieces, 1000)
-        //timerId = setInterval(scoreTracker, 100)
+        timerId2 = setInterval(scoreTracker, 100)
         //document.addEventListener('keyup', movePieces)
     })
     
