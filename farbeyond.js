@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let activateLaserRt = 1
     //let laserFire = 215
     //let currentTime = 20
-    //let score = 0
+    let scoreTracker
     
 /*  TODO 1) Keep fireballUp times the same
          2) Try doubling the time for the "remvove" of the fireballDown
@@ -97,7 +97,23 @@ document.addEventListener('DOMContentLoaded', () => {
 // START OF ALL FIREBALLS DOWN LEFT
 // TIMELINE (currentFireDnIndex 2 Start - 0:00:00:0500)
 // START of fireball down LEFT reenters at 2 and moves down diagonally to the left  
-    if (ignite < 0.166) {
+
+
+
+
+// TODO:  fIGURE OUT COLLISION LOGIC WHICH NEEDS TO REMOVE FIREBALLS STRUCK BY SPELL
+// AND INCREMENT "SCORE"
+
+/* if (currentFireDnIndex === laserFireIndex) {
+        squares[currentFireDnIndex].classList.remove('fireballDnLt')
+        squares[currentFireDnIndex].classList.remove('fireballDnRt')
+        squares[currentFireDnIndex].classList.remove('fireballDnCt')
+    }
+ */
+
+
+
+if (ignite < 0.166) {
         let currentFireDnIndex = 2
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
@@ -121,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 602)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-            }, 702)
-            let localTimer = 702;
+            }, 752)
+            let localTimer = 752;
             for (let i = 0; i < 10; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
@@ -130,29 +146,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer = localTimer +1)
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer = localTimer +100)
+                }, localTimer = localTimer +150)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1713)    
+            }, 2263)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                squares[237].classList.remove('village003')
-            }, 1813)
+                squares[237].classList.remove('village004')
+            }, 2413)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1814)    
+            }, 2414)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1914)
+            }, 2564)
 
 // TIMELINE (Fireball Down Start - 0:00:01:0315)
     
     // fireball down LEFT bounces and moves down right diagonally
         } else if (ignite => 0.083) {
-            let localTimer = 601;
+            let localTimer = 752;
             for (let i = 0; i < 11; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
@@ -160,23 +176,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer = localTimer +1)  
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer = localTimer +100)
+                }, localTimer = localTimer +150)
             }
             setTimeout(() => {
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1714)   
+            }, 2414)   
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                squares[238].classList.remove('village004')
-            }, 1814)
+                squares[238].classList.remove('village003')
+            }, 2564)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1815)    
+            }, 2565)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1915)
+            }, 2715)
         }
     }
 // END of fireball down LEFT reenters at 2 and moves down diagonally to the left 
@@ -192,20 +208,20 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 550)
 
             let localTimer1 = 550;
-            for (let x = 0; x < 4; x++) {
+            for (let x = 0; x < 3; x++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width -1
                     squares[currentFireDnIndex].classList.add('fireballDnLt')
                 }, localTimer1 = localTimer1 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, localTimer1 = localTimer1 +50)
+                }, localTimer1 = localTimer1 +150)
             }
             
     // fireball down LEFT moves down ONE space then moves down right diagonally
         if (ignite < 0.25) {
 
-            let localTimer2 = 754;
+            let localTimer2 = 1003;
             for (let x = 0; x < 3; x++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width
@@ -213,10 +229,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer2 = localTimer2 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer2 = localTimer2 +50)
+                }, localTimer2 = localTimer2 +150)
             }
 
-            let localTimer3 = 907;
+            let localTimer3 = 1456;
             for (let i = 0; i < 6; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
@@ -224,39 +240,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer3 = localTimer3 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer3 = localTimer3 +100)
+                }, localTimer3 = localTimer3 +150)
             }  
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1514)    
+            }, 2363)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                squares[233].classList.remove('village004')
-            }, 1614)
+                squares[233].classList.remove('village003')
+            }, 2513)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1615)    
+            }, 2514)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1715)
+            }, 2664)
     
     // fireball down LEFT bounces and moves down right diagonally
         } else if (ignite => 0.25) {
             
-            let localTimer2 = 754;
+            let localTimer2 = 1003;
             for (let i = 0; i < 2; i++) {
                 setTimeout(() => {   
-                    currentFireDnIndex += width +1
+                    currentFireDnIndex += width
                     squares[currentFireDnIndex].classList.add('fireballDnRt')
                 }, localTimer2 = localTimer2 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer2 = localTimer2 +50)
+                }, localTimer2 = localTimer2 +150)
             }
 
-            let localTimer3 = 856;
+            let localTimer3 = 1305;
             for (let i = 0; i < 7; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
@@ -264,23 +280,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer3 = localTimer3 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer3 = localTimer3 +50)
+                }, localTimer3 = localTimer3 +150)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 1564)    
+            }, 2363)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                squares[234].classList.remove('village003')
-            }, 1664)
+                squares[234].classList.remove('village004')
+            }, 2513)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1665)    
+            }, 2514)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1765)
+            }, 2664)
         }
     }
 // END of fireball down LEFT reenters at 4 and moves down diagonally to the left
@@ -301,29 +317,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {   
                     currentFireDnIndex = currentFireDnIndex + width
                     squares[currentFireDnIndex].classList.add('fireballFlareDnCt')
-                }, localTimer = localTimer +50)    
+                }, localTimer = localTimer +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballFlareDnCt')
-                }, localTimer = localTimer +50)
+                }, localTimer = localTimer +150)
+                /* if (laserFireIndex == currentFireDnIndex) {
+                    console.log("Explosion")
+                    squares[currentFireDnIndex].classList.add('fireballDnExplosion')
+                } */
             }
 
         if (ignite > 0.333 && ignite < 0.499) {
             setTimeout(() => {   
                 currentFireDnIndex = currentFireDnIndex + width
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 2000)    
+            }, 2564)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 2050)
+            }, 2714)
         
         } else if (ignite >= 0.499 && ignite < 0.666) {
             setTimeout(() => {   
                 currentFireDnIndex = currentFireDnIndex + width + 1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 2000)    
+            }, 2715)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 2050)
+            }, 2865)
         }
     }
 // END OF EXTRA FIREBALLS DOWN CENTER
@@ -337,9 +357,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500)
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-            }, 550)
+            }, 650)
 
-            let localTimer1 = 550;
+            let localTimer1 = 650;
             for (let i = 0; i < 3; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width +1
@@ -347,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer1 = localTimer1 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnRt')
-                }, localTimer1 = localTimer1 +50)
+                }, localTimer1 = localTimer1 +150)
             }
                 
             //  "IF" statement to divide fireball Dn Right
@@ -356,19 +376,19 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {   
                 currentFireDnIndex += width
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 704)    
+            }, 1104)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 754)
+            }, 1254)
             setTimeout(() => {   
                 currentFireDnIndex += width
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 755)    
+            }, 1255)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 805)
+            }, 1405)
 
-            let localTimer2 = 805;
+            let localTimer2 = 1405;
             for (let i = 0; i < 7; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width -1
@@ -376,48 +396,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer2 = localTimer2 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, localTimer2 = localTimer2 +50)
+                }, localTimer2 = localTimer2 +150)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 1163)    
+            }, 2463)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
                 squares[229].classList.remove('village002')
-            }, 1213)
+            }, 2613)
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1214)    
+            }, 2614)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1264)
+            }, 2764)
     
         } else if (ignite >= 0.750 && ignite < 0.833) {
             setTimeout(() => {   
                 currentFireDnIndex += width
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 704)    
+            }, 1104)    
             setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, 754)
+            }, 1254)
             setTimeout(() => {   
                 currentFireDnIndex += width
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 755)    
+            }, 1255)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 805)
+            }, 1405)
             setTimeout(() => {   
                 currentFireDnIndex += width
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 806)    
+            }, 1406)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 856)
+            }, 1556)
 
-            let localTimer3 = 856;
+            let localTimer3 = 1556;
             for (let i = 0; i < 6; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width -1
@@ -425,23 +445,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer3 = localTimer3 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, localTimer3 = localTimer3 +50)
+                }, localTimer3 = localTimer3 +150)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 1163)    
+            }, 2463)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
                 squares[230].classList.remove('village001')
-            }, 1213)
+            }, 2613)
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1214)    
+            }, 2614)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1264)
+            }, 2764)
         }         
     }
 // END of fireball down RIGHT reenters at 11 and moves down diagonally to the right
@@ -454,19 +474,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500)
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-            }, 550)
+            }, 650)
             setTimeout(() => {   
                 currentFireDnIndex += width +1
                 squares[currentFireDnIndex].classList.add('fireballDnRt')
-            }, 551)    
+            }, 651)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnRt')
-            }, 601)
+            }, 801)
 
 //  "IF" statement to divide fireball Dn Right
             
         if (ignite >= 0.833 && ignite < 0.916) {
-            let localTimer2 = 601;
+            let localTimer2 = 801;
             for (let i = 0; i < 11; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width -1
@@ -474,34 +494,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer2 = localTimer2 +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, localTimer2 = localTimer2 +100)
+                }, localTimer2 = localTimer2 +150)
             }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballFlareDnLt')
-            }, 1714)    
+            }, 2463)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballFlareDnLt')
                 squares[225].classList.remove('village001')
-            }, 1814)
+            }, 2612)
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1815)    
+            }, 2613)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')
-            }, 1915)
+            }, 2763)
     
         } else if (ignite >= 0.916) {
             setTimeout(() => {   
                 currentFireDnIndex += width
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 602)    
+            }, 801)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
-            }, 652)
+            }, 951)
 
-            let localTimer = 652;
+            let localTimer = 951;
             for (let i = 0; i < 10; i++) {
                 setTimeout(() => {   
                     currentFireDnIndex += width -1
@@ -509,25 +529,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, localTimer = localTimer +1)    
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
-                }, localTimer = localTimer +100)
+                }, localTimer = localTimer +150)
 //  TODO - FIX TIMING
 
             }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnLt')
-            }, 1865) 
+            }, 2462) 
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnLt')
                 squares[226].classList.remove('village002')
-            }, 1965)
+            }, 2612)
             setTimeout(() => {   
                 currentFireDnIndex += width -1
                 squares[currentFireDnIndex].classList.add('fireballDnExplosion')
-            }, 1966)    
+            }, 2613)    
             setTimeout(() => {
                 squares[currentFireDnIndex].classList.remove('fireballDnExplosion')                
-            }, 2066)
+            }, 2763)
         }
     }
 // END of fireball down RIGHT reenters at 13 and moves down diagonally to the right
@@ -585,14 +605,17 @@ function moveSpellCaster(e) {
 function laserFire() {
     if (villagesRemaining != 0) {
                 let laserFireIndex = currentSpellCasterIndex
+                laserTimerId = 0
+                for (let i = 0; i < 13; i++) {
                 setTimeout(() => {
                     laserFireIndex -= width
                     squares[laserFireIndex].classList.add('laser')
-                }, 10)
+                }, laserTimerId = laserTimerId + 10)
                 setTimeout(() => {
                     squares[laserFireIndex].classList.remove('laser')
-                }, 20)
-                setTimeout(() => {
+                }, laserTimerId = laserTimerId + 10)
+            }
+                /* setTimeout(() => {
                     laserFireIndex -= width
                     squares[laserFireIndex].classList.add('laser')
                 }, 30)
@@ -682,7 +705,7 @@ function laserFire() {
                 }, 270)
                 setTimeout(() => {
                     squares[laserFireIndex].classList.remove('laser')
-                }, 280)
+                }, 280) */
     }
 //}
 // END of laserFireLt/spellCaster Laser
@@ -822,7 +845,7 @@ When all of the cities are destroyed.
     }
 */
     
-/* Rules to win Far Beyond stage 003.
+/* Rules to win Guardian's Plight.
 This can be based on time or a certain score.
     function win() {
         Score == x
@@ -856,10 +879,10 @@ This can be based on time or a certain score.
         squares[226].classList.add('village002')
         squares[229].classList.add('village002')
         squares[230].classList.add('village001')
-        squares[234].classList.add('village003')
-        squares[233].classList.add('village004')
-        squares[237].classList.add('village003')
-        squares[238].classList.add('village004')
+        squares[233].classList.add('village003')
+        squares[234].classList.add('village004')
+        squares[237].classList.add('village004')
+        squares[238].classList.add('village003')
     }
     
     // to start and pause the game
