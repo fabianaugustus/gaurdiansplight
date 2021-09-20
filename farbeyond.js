@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const squares = document.querySelectorAll('.grid div')
-    //const scoreDisplay = document.querySelector('span')
-    //const spellCast = document.querySelectorAll('.spellCaster')
     const startBtn = document.querySelector('#button')
     const width = 16
     let currentSpellCasterIndex = 215
     let currentSpellCatcherIndex = 216
+    let startTime = 30
 /*  TODO THE "villagesRemaining" VARIABLE MUST BE LINKED TO A COUNTDOWN
     FUNCTION CALLED "villagesDestroyed". */
     let villagesRemaining = 6
@@ -14,8 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     A PLAYER SUCCESSFULLY CATCHES AT LEAST ONE SPELL (WHICH WILL COME
     DOWN THE CENTER RANDOMELY). */
     let activateLaserRt = 1
-    //let laserFire = 215
-    //let currentTime = 20
     let scoreTracker
     
 /*  TODO 1) Keep fireballUp times the same
@@ -28,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //  This should loop until either the "Win" or "Lose" fuction occurs
     function fireballExit() {
         let currentfireUpIndex = 39
+        let timeLeft = startTime--
+        document.getElementById('timer').innerHTML = timeLeft
 // TIMELINE (Fireball Up Start - 0:00:00:0000)
         let ignite = Math.random()
             
@@ -98,20 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // TIMELINE (currentFireDnIndex 2 Start - 0:00:00:0500)
 // START of fireball down LEFT reenters at 2 and moves down diagonally to the left  
 
-
-
-
 // TODO:  fIGURE OUT COLLISION LOGIC WHICH NEEDS TO REMOVE FIREBALLS STRUCK BY SPELL
 // AND INCREMENT "SCORE"
-
-/* if (currentFireDnIndex === laserFireIndex) {
-        squares[currentFireDnIndex].classList.remove('fireballDnLt')
-        squares[currentFireDnIndex].classList.remove('fireballDnRt')
-        squares[currentFireDnIndex].classList.remove('fireballDnCt')
-    }
- */
-
-
 
 if (ignite < 0.166) {
         let currentFireDnIndex = 2
@@ -530,8 +517,6 @@ if (ignite < 0.166) {
                 setTimeout(() => {
                     squares[currentFireDnIndex].classList.remove('fireballDnLt')
                 }, localTimer = localTimer +150)
-//  TODO - FIX TIMING
-
             }
             setTimeout(() => {   
                 currentFireDnIndex += width -1
@@ -615,97 +600,6 @@ function laserFire() {
                     squares[laserFireIndex].classList.remove('laser')
                 }, laserTimerId = laserTimerId + 10)
             }
-                /* setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 30)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 40)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 50)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 60)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 70)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 80)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 90)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 100)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 110)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 120)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 130)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 140)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 150)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 160)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 170)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 180)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 190)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 200)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 210)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 220)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 230)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 240)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 250)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 260)
-                setTimeout(() => {
-                    laserFireIndex -= width
-                    squares[laserFireIndex].classList.add('laser')
-                }, 270)
-                setTimeout(() => {
-                    squares[laserFireIndex].classList.remove('laser')
-                }, 280) */
     }
 //}
 // END of laserFireLt/spellCaster Laser
@@ -823,16 +717,6 @@ laserFireRt() { */
 
 // END OF AUTOLASER FUNCTIONS
 
-/* function scoreTracker() {
-if (laserFireIndex = 55) {
-    //score = 0
-    score++
-    console.log(score)
-    scoreDisplay.innerText = score
-    scoreDisplay.textContent = score
-    }
-} */
-
 /* The next line calls the "moveSpellCaster" function which moves both the
 SpellCaster and the SpellCatcher in the fuction above. */
     
@@ -842,6 +726,7 @@ document.addEventListener('keydown', moveSpellCaster)
 When all of the cities are destroyed.
     function lose() {
         Fireball destroys last portion of last city (city block = 0)
+    
     }
 */
     
