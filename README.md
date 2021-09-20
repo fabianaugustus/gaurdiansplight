@@ -1,6 +1,6 @@
 # Guardian's Plight
 
-This game is based on the upcoming sequel to "Far Beyond: The Jerod Saga".  it continues to follow the exploits of Kelcy (a young Earth girl) and Fabian (A mischief Mockian (Maker) from a land called Far Beyond.
+This game is based on the upcoming sequel to "Far Beyond: The Jerod Saga".  It continues to follow the exploits of Kelcy (a young Earth girl) and Fabian (A mischief Mockian (Maker) from a land called Far Beyond.
 
 In the game, a player is tasked with preseviing the small villages that are facing bombardment from projectiles being ejected from Mount Nanoah, an eternally active volcano that, not only rains fieballs down on nearby villages, but also spawns what eventually become the Guardian's (living statues as large as building and as small as toy soldiers).
 
