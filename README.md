@@ -20,4 +20,13 @@ Level Two:
 
 Level Three:
 
-1.  Player gets a double spellcaster with which to destroy the fireballs and an extra village segment which will appear automatically once the last of the original village segments has been destroyed.
+1.  Player gets a double spellcaster with which to destroy the fireballs.
+2.  Player an extra village segment which will appear automatically once the last of the original village segments has been destroyed.
+
+Level Four:
+
+1.  Player gets a double spellcaster with which to destroy the fireballs.
+2.  Player an extra village segment which will appear automatically once the last of the original village segments has been destroyed.
+3.  Speed of fireballs increases.
+4.  Timer increases.
+5.  May award player with an NFT or some other kind of gift after this level.
