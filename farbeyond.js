@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 16
     let currentSpellCasterIndex = 215
     let currentSpellCatcherIndex = 216
-    let startTime = 30
+    let startTime = 60
 /*  TODO THE "villagesRemaining" VARIABLE MUST BE LINKED TO A COUNTDOWN
     FUNCTION CALLED "villagesDestroyed". */
     let villagesRemaining = 6
